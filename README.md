@@ -59,21 +59,20 @@ BaryoVPN can work with commonly used Xray-based profile formats, depending on th
 
 The app validates unsupported or incomplete data instead of silently treating it as a working connection. TUIC v5 is not included in the current bundled core; users should not expect a TUIC profile to connect in this release.
 
-## Latest release · 2.29.1 / Build 268
+## Latest release · 2.30.0 / Build 269
 [![Release](https://img.shields.io/github/v/release/Anooshacavin/BaryoVPN-Android?display_name=tag&sort=semver&style=flat-square&color=635BFF)](https://github.com/Anooshacavin/BaryoVPN-Android/releases/latest)
 > [!CAUTION]
-> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Uninstall the BaryoVPN version currently on your device, then install BaryoVPN 2.29.1 using the APK attached to the latest release. Uninstalling may erase locally saved profiles and settings; back up anything you need first.
+> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Uninstall the BaryoVPN version currently on your device, then install BaryoVPN 2.30.0 using the APK attached to the latest release. Uninstalling may erase locally saved profiles and settings; back up anything you need first.
 
-### What’s new in 2.29.1
-- Optional password support for `.baryovpn` configuration transfer files.
-- Automatic detection of password-protected files during import.
-- Modern import result dialogs with clear success and error feedback.
-- Profiles and subscription sources refresh immediately after import without restarting the app.
-- A dedicated `.baryovpn` import action is available on a fresh installation with no profiles.
-- Responsive two-column empty-state actions for better layout on narrow Android screens.
-- Improved configuration transfer reliability and user-facing import/export guidance.
+### What’s new in 2.30.0
+- Reliable Stop action from the foreground notification across Android versions and vendor ROMs.
+- Immediate removal of the foreground notification after stopping from inside the app.
+- Xray and VPN TUN teardown no longer wait behind a blocked startup task.
+- Immediate Connecting feedback while network, permission and configuration checks continue.
+- Clear Error state when startup validation fails instead of leaving the app stuck on Connecting.
+- Existing encrypted `.baryovpn` transfer, DNS, profile and subscription features are preserved.
 <div align="center">
-### [Download BaryoVPN 2.29.1 for Android →](https://github.com/Anooshacavin/BaryoVPN-Android/releases/latest)
+### [Download BaryoVPN 2.30.0 for Android →](https://github.com/Anooshacavin/BaryoVPN-Android/releases/latest)
 </div>
 ## Install in a few steps
 
@@ -118,6 +117,7 @@ BaryoVPN's public distribution repository does not contain application source co
 
 | Version | Highlights |
 |---|---|
+| **2.30.0** | Reliable notification/app Stop handling, faster startup feedback and safer VPN lifecycle teardown |
 | **2.29.1** | Optional `.baryovpn` passwords, immediate import refresh and responsive empty-state actions |
 | **2.28.14** | Outline dynamic keys and prefix support, plus clearer connection diagnostics |
 | **2.28.8** | Bug Fix release with stability and connection improvements |
