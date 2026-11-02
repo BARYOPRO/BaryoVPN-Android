@@ -52,6 +52,7 @@ BaryoVPN can work with commonly used Xray-based profile formats, depending on th
 - VLESS, including common Reality and Vision fields
 - VMess
 - Trojan
+- Hysteria2 (`hysteria2://` and `hy2://`) with Xray v2 outbound mapping
 - Shadowsocks
 - Outline dynamic access keys (`ssconf://`), including prefix disguises
 - SOCKS5 and HTTP proxy profiles
@@ -59,17 +60,26 @@ BaryoVPN can work with commonly used Xray-based profile formats, depending on th
 
 The app validates unsupported or incomplete data instead of silently treating it as a working connection. TUIC v5 is not included in the current bundled core; users should not expect a TUIC profile to connect in this release.
 
-## Latest release · 2.30.1 / Build 270
+## Latest release · 2.30.2 / Build 271
 [![Release](https://img.shields.io/github/v/release/Anooshacavin/BaryoVPN-Android?display_name=tag&sort=semver&style=flat-square&color=635BFF)](https://github.com/Anooshacavin/BaryoVPN-Android/releases/latest)
 > [!CAUTION]
-> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing BaryoVPN 2.30.1. The APK attached to the latest release is a universal build for arm64-v8a, armeabi-v7a, x86 and x86_64 devices.
+> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing BaryoVPN 2.30.2. The APK attached to the latest release is a universal build for arm64-v8a, armeabi-v7a, x86 and x86_64 devices.
 
-### What’s new in 2.30.1
+### What’s new in 2.30.2
+- Added native Hysteria2 import support for single `hysteria2://` and `hy2://` links.
+- Hysteria2 profiles are converted to the bundled Xray v2 outbound with TLS, SNI and authentication preserved.
+- Added Hysteria2 support to subscription parsing, profile inspection and standard share export.
+- Legacy Hysteria2 `insecure=1` metadata is migrated through the current certificate verification path; deprecated `allowInsecure` is not emitted in the final Xray configuration.
+- Added regression tests for manual import, subscription import, Xray JSON conversion and round-trip export.
+- Universal APK build 271 includes arm64-v8a, armeabi-v7a, x86 and x86_64 binaries.
+- The public repository remains distribution-only and contains no application source code.
+
+### Included from 2.30.1
 - Advanced TLS verification settings in the profile editor: Strict, Verify by name (VCN), Certificate pinning (PCS) and Legacy compatibility.
 - Legacy `allowInsecure` is migrated at runtime and is never passed to the current Xray schema.
 - Certificate pins are validated as SHA-256 fingerprints before a profile can be saved.
 - Added regression coverage for the new TLS modes; the full suite passes with 190 tests.
-- Version metadata is synchronized at 2.30.1 / Android build 270.
+- Version metadata is synchronized at 2.30.2 / Android build 271.
 - Reliable Stop action from the foreground notification across Android versions and vendor ROMs.
 - Immediate removal of the foreground notification after stopping from inside the app.
 - Xray and VPN TUN teardown no longer wait behind a blocked startup task.
@@ -77,7 +87,7 @@ The app validates unsupported or incomplete data instead of silently treating it
 - Clear Error state when startup validation fails instead of leaving the app stuck on Connecting.
 - Existing encrypted `.baryovpn` transfer, DNS, profile and subscription features are preserved.
 <div align="center">
-### [Download BaryoVPN 2.30.1 for Android →](https://github.com/Anooshacavin/BaryoVPN-Android/releases/latest)
+### [Download BaryoVPN 2.30.2 for Android →](https://github.com/Anooshacavin/BaryoVPN-Android/releases/latest)
 </div>
 ## Install in a few steps
 
@@ -122,6 +132,7 @@ BaryoVPN's public distribution repository does not contain application source co
 
 | Version | Highlights |
 |---|---|
+| **2.30.2** | Hysteria2 import/export support, Xray v2 mapping and universal release build 271 |
 | **2.30.1** | Advanced TLS verification UI, PCS/VCN migration and universal release build 270 |
 | **2.30.0** | Reliable notification/app Stop handling, faster startup feedback and safer VPN lifecycle teardown |
 | **2.29.1** | Optional `.baryovpn` passwords, immediate import refresh and responsive empty-state actions |
