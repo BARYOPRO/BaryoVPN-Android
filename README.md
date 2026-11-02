@@ -5,15 +5,15 @@
 ### A focused Android VPN experience built for clarity, control and calm
 
 <p>
-  <a href="https://github.com/Anooshacavin/BaryoVPN-Android/releases/latest"><img src="https://img.shields.io/badge/Download-latest%20APK-635BFF?style=for-the-badge&logo=android&logoColor=white" alt="Download latest APK"></a>
-  <a href="https://github.com/Anooshacavin/BaryoVPN-Android/releases"><img src="https://img.shields.io/github/downloads/Anooshacavin/BaryoVPN-Android/total?style=for-the-badge&color=0F766E" alt="Downloads"></a>
-  <a href="https://github.com/Anooshacavin/BaryoVPN-Android/issues/new?template=bug_report.md"><img src="https://img.shields.io/badge/Report-a%20bug-E05D6F?style=for-the-badge" alt="Report a bug"></a>
+  <a href="https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest"><img src="https://img.shields.io/badge/Download-latest%20APK-635BFF?style=for-the-badge&logo=android&logoColor=white" alt="Download latest APK"></a>
+  <a href="https://github.com/BARYOPRO/BaryoVPN-Android/releases"><img src="https://img.shields.io/github/downloads/BARYOPRO/BaryoVPN-Android/total?style=for-the-badge&color=0F766E" alt="Downloads"></a>
+  <a href="https://github.com/BARYOPRO/BaryoVPN-Android/issues/new?template=bug_report.md"><img src="https://img.shields.io/badge/Report-a%20bug-E05D6F?style=for-the-badge" alt="Report a bug"></a>
 </p>
 
 <p>
-  <a href="https://github.com/Anooshacavin/BaryoVPN-Android/releases/latest">Get the latest release</a>
+  <a href="https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest">Get the latest release</a>
   · <a href="SECURITY.md">Security & privacy</a>
-  · <a href="https://github.com/Anooshacavin/BaryoVPN-Android/issues">Community issues</a>
+  · <a href="https://github.com/BARYOPRO/BaryoVPN-Android/issues">Community issues</a>
 </p>
 
 </div>
@@ -60,18 +60,27 @@ BaryoVPN can work with commonly used Xray-based profile formats, depending on th
 
 The app validates unsupported or incomplete data instead of silently treating it as a working connection. TUIC v5 is not included in the current bundled core; users should not expect a TUIC profile to connect in this release.
 
-## Latest release · 2.30.2 / Build 271
-[![Release](https://img.shields.io/github/v/release/Anooshacavin/BaryoVPN-Android?display_name=tag&sort=semver&style=flat-square&color=635BFF)](https://github.com/Anooshacavin/BaryoVPN-Android/releases/latest)
+## Latest release · 2.30.3 / Build 272
+[![Release](https://img.shields.io/github/v/release/BARYOPRO/BaryoVPN-Android?display_name=tag&sort=semver&style=flat-square&color=635BFF)](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest)
 > [!CAUTION]
-> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing BaryoVPN 2.30.2. The APK attached to the latest release is a universal build for arm64-v8a, armeabi-v7a, x86 and x86_64 devices.
+> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing BaryoVPN 2.30.3. The APK attached to the latest release is a universal build for arm64-v8a, armeabi-v7a, x86 and x86_64 devices.
 
-### What’s new in 2.30.2
+### What’s new in 2.30.3
+- Removed the post-splash blank/white flash by rendering the first app screen underneath the startup overlay before the transition completes.
+- Kept the professional three-second branded startup while making the handoff to the dashboard continuous and non-blocking.
+- Reduced startup storage work by removing a duplicated subscription snapshot read during bootstrap.
+- Matched the native Android startup window to the light and dark application palettes instead of a hard-coded white background.
+- Added Android deep-link handling for `hysteria2://` and `hy2://`.
+- Universal APK build 272 includes arm64-v8a, armeabi-v7a, x86 and x86_64 binaries.
+- Full TypeScript, lint and regression test checks pass before release.
+
+### Included from 2.30.2
 - Added native Hysteria2 import support for single `hysteria2://` and `hy2://` links.
 - Hysteria2 profiles are converted to the bundled Xray v2 outbound with TLS, SNI and authentication preserved.
 - Added Hysteria2 support to subscription parsing, profile inspection and standard share export.
 - Legacy Hysteria2 `insecure=1` metadata is migrated through the current certificate verification path; deprecated `allowInsecure` is not emitted in the final Xray configuration.
 - Added regression tests for manual import, subscription import, Xray JSON conversion and round-trip export.
-- Universal APK build 271 includes arm64-v8a, armeabi-v7a, x86 and x86_64 binaries.
+- Version metadata is synchronized at 2.30.2 / Android build 271.
 - The public repository remains distribution-only and contains no application source code.
 
 ### Included from 2.30.1
@@ -79,7 +88,7 @@ The app validates unsupported or incomplete data instead of silently treating it
 - Legacy `allowInsecure` is migrated at runtime and is never passed to the current Xray schema.
 - Certificate pins are validated as SHA-256 fingerprints before a profile can be saved.
 - Added regression coverage for the new TLS modes; the full suite passes with 190 tests.
-- Version metadata is synchronized at 2.30.2 / Android build 271.
+- Version metadata is synchronized at 2.30.1 / Android build 270.
 - Reliable Stop action from the foreground notification across Android versions and vendor ROMs.
 - Immediate removal of the foreground notification after stopping from inside the app.
 - Xray and VPN TUN teardown no longer wait behind a blocked startup task.
@@ -87,11 +96,11 @@ The app validates unsupported or incomplete data instead of silently treating it
 - Clear Error state when startup validation fails instead of leaving the app stuck on Connecting.
 - Existing encrypted `.baryovpn` transfer, DNS, profile and subscription features are preserved.
 <div align="center">
-### [Download BaryoVPN 2.30.2 for Android →](https://github.com/Anooshacavin/BaryoVPN-Android/releases/latest)
+### [Download BaryoVPN 2.30.3 for Android →](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest)
 </div>
 ## Install in a few steps
 
-1. Open the [latest release](https://github.com/Anooshacavin/BaryoVPN-Android/releases/latest).
+1. Open the [latest release](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest).
 2. Download the APK asset.
 3. If Android asks, allow installation from your browser or file manager.
 4. Install and open BaryoVPN.
@@ -132,6 +141,7 @@ BaryoVPN's public distribution repository does not contain application source co
 
 | Version | Highlights |
 |---|---|
+| **2.30.3** | Smooth startup handoff, no post-splash white flash, reduced bootstrap work and universal release build 272 |
 | **2.30.2** | Hysteria2 import/export support, Xray v2 mapping and universal release build 271 |
 | **2.30.1** | Advanced TLS verification UI, PCS/VCN migration and universal release build 270 |
 | **2.30.0** | Reliable notification/app Stop handling, faster startup feedback and safer VPN lifecycle teardown |
