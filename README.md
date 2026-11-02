@@ -74,6 +74,7 @@ The app validates unsupported or incomplete data instead of silently treating it
 - Restored the exact native-library packaging baseline from the known-good 2.30.3 APK: uncompressed `Stored` native libraries.
 - Restored the original Universal manifest and ABI packaging path instead of experimental install changes.
 - Universal APK build 279 includes arm64-v8a, armeabi-v7a, x86 and x86_64 binaries.
+- Added separately signed-compatible ABI APKs: `arm64-v8a`, `armeabi-v7a`, `x86` and `x86_64`.
 - Full TypeScript, lint, regression test and native release build checks pass before release.
 
 ### Included from 2.30.3
@@ -107,10 +108,19 @@ The app validates unsupported or incomplete data instead of silently treating it
 <div align="center">
 ### [Download BaryoVPN 2.30.4 Build 279 without Splash →](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest)
 </div>
+
+### Architecture-specific downloads
+
+Use the Universal APK for normal installation. If a device requires a single-ABI package, choose the matching file:
+
+- [arm64-v8a — modern 64-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.30.4/BaryoVPN-2.30.4-arm64-v8a-build279.apk)
+- [armeabi-v7a — older 32-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.30.4/BaryoVPN-2.30.4-armeabi-v7a-build279.apk)
+- [x86 — 32-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.30.4/BaryoVPN-2.30.4-x86-build279.apk)
+- [x86_64 — 64-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.30.4/BaryoVPN-2.30.4-x86_64-build279.apk)
 ## Install in a few steps
 
 1. Open the [latest release](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest).
-2. Download the Universal APK asset.
+2. Download the Universal APK asset, or choose the matching architecture-specific APK above.
 3. If Android asks, allow installation from your browser or file manager.
 4. Install and open BaryoVPN.
 5. Add a subscription or import a supported profile with the in-app tools.
