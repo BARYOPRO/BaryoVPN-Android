@@ -60,21 +60,20 @@ BaryoVPN can work with commonly used Xray-based profile formats, depending on th
 
 The app validates unsupported or incomplete data instead of silently treating it as a working connection. TUIC v5 is not included in the current bundled core; users should not expect a TUIC profile to connect in this release.
 
-## Latest release · 2.30.4 / Build 278
+## Latest release · 2.30.4 / Build 279
 [![Release](https://img.shields.io/github/v/release/BARYOPRO/BaryoVPN-Android?display_name=tag&sort=semver&style=flat-square&color=635BFF)](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest)
 > [!CAUTION]
-> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing BaryoVPN 2.30.4 Build 278. The custom branded Splash screen has been completely removed. The release includes a Universal APK plus direct ABI-specific APKs for phones that reject a multi-ABI package.
+> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing BaryoVPN 2.30.4 Build 279. This release is an exact rollback of the native APK packaging baseline that was previously installing correctly. The custom branded Splash screen has been completely removed.
 
-### What’s new in 2.30.4 Build 278
+### What’s new in 2.30.4 Build 279
 - Prevented the initial no-profile route from rendering before the saved startup destination is ready.
 - Users with saved profiles now enter the configured destination directly without seeing the empty state first.
 - Kept the custom branded Splash removed; there is no overlay, logo, animation, progress indicator or three-second timer.
 - Removed the crash-prone native immersive fullscreen startup path.
 - Restored stable Android Activity and native module startup behavior.
-- Removed unused biometric permissions from the final manifest; BaryoVPN does not request fingerprint authentication.
-- Added a real Gradle `ndk.abiFilters` path so architecture-specific builds contain only their declared ABI.
-- Universal APK build 278 includes arm64-v8a, armeabi-v7a, x86 and x86_64 binaries.
-- Added direct `arm64-v8a` and `armeabi-v7a` APKs for devices where the Universal package is rejected.
+- Restored the exact native-library packaging baseline from the known-good 2.30.3 APK: uncompressed `Stored` native libraries.
+- Restored the original Universal manifest and ABI packaging path instead of experimental install changes.
+- Universal APK build 279 includes arm64-v8a, armeabi-v7a, x86 and x86_64 binaries.
 - Full TypeScript, lint, regression test and native release build checks pass before release.
 
 ### Included from 2.30.3
@@ -106,12 +105,12 @@ The app validates unsupported or incomplete data instead of silently treating it
 - Clear Error state when startup validation fails instead of leaving the app stuck on Connecting.
 - Existing encrypted `.baryovpn` transfer, DNS, profile and subscription features are preserved.
 <div align="center">
-### [Download BaryoVPN 2.30.4 Build 278 without Splash →](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest)
+### [Download BaryoVPN 2.30.4 Build 279 without Splash →](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest)
 </div>
 ## Install in a few steps
 
 1. Open the [latest release](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest).
-2. Download the Universal APK first. If Android rejects it, use `arm64-v8a` for modern 64-bit ARM phones or `armeabi-v7a` for older 32-bit ARM phones.
+2. Download the Universal APK asset.
 3. If Android asks, allow installation from your browser or file manager.
 4. Install and open BaryoVPN.
 5. Add a subscription or import a supported profile with the in-app tools.
@@ -151,7 +150,7 @@ BaryoVPN's public distribution repository does not contain application source co
 
 | Version | Highlights |
 |---|---|
-| **2.30.4 Build 278** | Install compatibility manifest cleanup, real ABI filters, Universal plus arm64-v8a/armeabi-v7a APKs |
+| **2.30.4 Build 279** | Exact rollback to the known-good native APK packaging and Universal manifest baseline |
 | **2.30.3** | Smooth startup handoff, no post-splash white flash, reduced bootstrap work and universal release build 272 |
 | **2.30.2** | Hysteria2 import/export support, Xray v2 mapping and universal release build 271 |
 | **2.30.1** | Advanced TLS verification UI, PCS/VCN migration and universal release build 270 |
