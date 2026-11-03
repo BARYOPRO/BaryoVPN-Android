@@ -103,9 +103,15 @@ The app validates unsupported or incomplete data instead of silently treating it
 - Immediate Connecting feedback while network, permission and configuration checks continue.
 - Clear Error state when startup validation fails instead of leaving the app stuck on Connecting.
 - Existing encrypted `.baryovpn` transfer, DNS, profile and subscription features are preserved.
-<div align="center">
-### [Download BaryoVPN 2.31.2 Build 282 →](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest)
-</div>
+### Download the latest release
+
+<p align="center">
+  <a href="https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest">
+    <img src="https://img.shields.io/badge/Download%20BaryoVPN-2.31.2%20%7C%20Build%20282-635BFF?style=for-the-badge&logo=android&logoColor=white" alt="Download BaryoVPN 2.31.2 Build 282" />
+  </a>
+</p>
+
+Download the official Release APKs from the [BaryoVPN 2.31.2 release page](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.31.2).
 
 ### Architecture-specific downloads
 
