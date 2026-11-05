@@ -60,18 +60,19 @@ BaryoVPN can work with commonly used Xray-based profile formats, depending on th
 
 The app validates unsupported or incomplete data instead of silently treating it as a working connection. TUIC v5 is not included in the current bundled core; users should not expect a TUIC profile to connect in this release.
 
-## Latest release · 2.35.0 / Build 294
+## Latest release · 2.36.0 / Build 295
 [![Release](https://img.shields.io/github/v/release/BARYOPRO/BaryoVPN-Android?display_name=tag&sort=semver&style=flat-square&color=635BFF)](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest)
 > [!CAUTION]
-> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing BaryoVPN 2.35.0 Build 294. This is a standalone Android **release build**. No Metro server, development shell or source archive is required.
+> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing BaryoVPN 2.36.0 Build 295. This is a standalone Android **release build**. No Metro server, development shell or source archive is required.
 
-### What’s new in 2.35.0 Build 294
-- Added **Fastest Connect** to the dashboard. It tests up to 12 saved servers sequentially using the existing Xray configuration, real server handshake and configured HTTP probe endpoint.
-- Failed, timed-out or malformed probes are excluded; the lowest valid measured latency wins, with deterministic tie-breaking.
-- The winning profile is selected atomically before connection, preventing a stale UI selection from starting the wrong server.
-- Added visible progress while candidates are being tested and a clear success/error result after the automatic connection attempt.
-- Kept the manual Connect flow unchanged; Fastest Connect is disabled while a VPN session is active or another test is running.
-- Version 2.35.0 / Android build 294 can be installed as an update over 2.34.0 / Build 293.
+### What’s new in 2.36.0 Build 295
+- Removed the experimental Fastest Connect flow; the dashboard now keeps the simpler, predictable manual server selection and connection path.
+- Reduced idle native status polling from every second to every three seconds while preserving one-second updates during Connecting and Connected states.
+- Memoized dashboard log filtering, sorting and counters to avoid repeating work on unrelated UI renders.
+- Update Center now accepts only HTTPS release asset URLs hosted by `github.com`.
+- Downloaded APKs are verified against the GitHub-provided SHA-256 asset digest before they become installable; a mismatch deletes the file and blocks installation.
+- Preserved the existing manual Connect flow, secure profile storage, Xray v26.10.31 engine, QR scanner, Midnight Aurora theme and ABI-aware installer.
+- Version 2.36.0 / Android build 295 can be installed as an update over 2.35.0 / Build 294.
 - Published one Universal APK plus four architecture-specific APKs.
 - The public distribution repository remains source-free by design.
 
@@ -116,20 +117,20 @@ The app validates unsupported or incomplete data instead of silently treating it
 
 <p align="center">
   <a href="https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest">
-    <img src="https://img.shields.io/badge/Download%20BaryoVPN-2.35.0%20%7C%20Build%20294-635BFF?style=for-the-badge&logo=android&logoColor=white" alt="Download BaryoVPN 2.35.0 Build 294" />
+    <img src="https://img.shields.io/badge/Download%20BaryoVPN-2.36.0%20%7C%20Build%20295-635BFF?style=for-the-badge&logo=android&logoColor=white" alt="Download BaryoVPN 2.36.0 Build 295" />
   </a>
 </p>
 
-Download the official Release APKs from the [BaryoVPN 2.35.0 release page](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.35.0).
+Download the official Release APKs from the [BaryoVPN 2.36.0 release page](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.36.0).
 
 ### Architecture-specific downloads
 
 Use the Universal APK for normal installation. If a device requires a single-ABI package, choose the matching file:
 
-- [arm64-v8a — modern 64-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.35.0/BaryoVPN-2.35.0-arm64-v8a-release.apk)
-- [armeabi-v7a — older 32-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.35.0/BaryoVPN-2.35.0-armeabi-v7a-release.apk)
-- [x86 — 32-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.35.0/BaryoVPN-2.35.0-x86-release.apk)
-- [x86_64 — 64-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.35.0/BaryoVPN-2.35.0-x86_64-release.apk)
+- [arm64-v8a — modern 64-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.36.0/BaryoVPN-2.36.0-arm64-v8a-release.apk)
+- [armeabi-v7a — older 32-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.36.0/BaryoVPN-2.36.0-armeabi-v7a-release.apk)
+- [x86 — 32-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.36.0/BaryoVPN-2.36.0-x86-release.apk)
+- [x86_64 — 64-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.36.0/BaryoVPN-2.36.0-x86_64-release.apk)
 ## Install in a few steps
 
 1. Open the [latest release](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest).
