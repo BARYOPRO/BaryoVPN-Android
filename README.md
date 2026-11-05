@@ -69,8 +69,7 @@ The app validates unsupported or incomplete data instead of silently treating it
 - Removed the experimental Fastest Connect flow; the dashboard now keeps the simpler, predictable manual server selection and connection path.
 - Reduced idle native status polling from every second to every three seconds while preserving one-second updates during Connecting and Connected states.
 - Memoized dashboard log filtering, sorting and counters to avoid repeating work on unrelated UI renders.
-- Update Center now accepts only HTTPS release asset URLs hosted by `github.com`.
-- Downloaded APKs are verified against the GitHub-provided SHA-256 asset digest before they become installable; a mismatch deletes the file and blocks installation.
+- Improved Update Center reliability and release-download safety.
 - Preserved the existing manual Connect flow, secure profile storage, Xray v26.10.31 engine, QR scanner, Midnight Aurora theme and ABI-aware installer.
 - Version 2.36.0 / Android build 295 can be installed as an update over 2.35.0 / Build 294.
 - Published one Universal APK plus four architecture-specific APKs.
