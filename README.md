@@ -65,16 +65,17 @@ BaryoVPN can work with commonly used Xray-based profile formats, depending on th
 
 The app validates unsupported or incomplete data instead of silently treating it as a working connection. TUIC v5 is not included in the current bundled core; users should not expect a TUIC profile to connect in this release.
 
-## Latest release · 2.38.3 / Build 303
+## Latest release · 2.38.4 / Build 304
 [![Release](https://img.shields.io/github/v/release/BARYOPRO/BaryoVPN-Android?display_name=tag&sort=semver&style=flat-square&color=635BFF)](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest)
 > [!CAUTION]
-> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing or updating BaryoVPN. The 2.38.3 Build 303 APKs are standalone Android **release builds**: no Metro server or development shell is required.
+> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing or updating BaryoVPN. The 2.38.4 Build 304 APKs are standalone Android **release builds**: no Metro server or development shell is required.
 
-### What’s new in 2.38.3
-- **Modern DNA windows:** Create/Edit and encrypted transfer dialogs now use centered, bounded cards with consistent elevation, rounded surfaces and safe-area-aware keyboard handling.
-- **Reliable dismissal:** Tapping the dimmed area outside a DNA dialog closes it; taps inside the card remain contained. Transfer dialogs also have an explicit close control and clear temporary password/preview data when dismissed.
-- **Retained from 2.38.2 / Build 302:** Responsive Disconnect now closes the Android VPN TUN immediately while native cleanup runs off the Android main thread.
-- **Retained from 2.38.1 / Build 301:** Baryo DNA / Mode Studio and encrypted local-profile transfer.
+### What’s new in 2.38.4
+- **Responsive Start/Stop:** Native Start and Stop dispatch independently of the serialized latency-probe queue; Disconnecting remains visible until the native service confirms teardown.
+- **Race-safe cleanup:** Stop closes the TUN descriptor immediately and performs blocking Xray/secure-store cleanup in the background. Lifecycle generation guards prevent stale recovery or scheduled callbacks from reconnecting after a manual Stop.
+- **Start timeout recovery:** A timed-out native Start is invalidated and followed by a bounded cleanup request so a late completion cannot silently leave a tunnel active. DNA reconnect waits for native Stop completion.
+- **Modern DNA quick actions:** The three-dot profile menu is now an in-app dialog that closes on outside tap, Android Back or the close control.
+- **Retained from 2.38.3 / Build 303:** Centered DNA Create/Edit and encrypted-transfer dialogs with safe-area-aware keyboard handling and secure dismissal cleanup.
 - **Retained from 2.38.0 / Build 300:** App Routing uses a virtualized installed-app list, with no fixed 180-row cutoff and precomputed search keys.
 
 ### Recent 2.37 updates
@@ -83,7 +84,7 @@ The app validates unsupported or incomplete data instead of silently treating it
 - **2.37.1 / Build 297:** Version-aware NEW badges help users discover newly introduced settings, including Adaptive Latency.
 - **2.37.0 / Build 296:** Adaptive Latency can refresh latency after a successful connection, a connected server change or a return from the background, without a background timer.
 
-See the [2.38.3 release notes](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.38.3) for this build and the [release history](https://github.com/BARYOPRO/BaryoVPN-Android/releases) for earlier versions. The public repository remains distribution-only and does not contain application source code.
+See the [2.38.4 release notes](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.38.4) for this build and the [release history](https://github.com/BARYOPRO/BaryoVPN-Android/releases) for earlier versions. The public repository remains distribution-only and does not contain application source code.
 
 ### Included in 2.36.0 Build 295
 - Removed the experimental Fastest Connect flow; the dashboard keeps manual server selection and connection.
@@ -134,14 +135,14 @@ See the [2.38.3 release notes](https://github.com/BARYOPRO/BaryoVPN-Android/rele
     <img src="https://img.shields.io/badge/Download%20BaryoVPN-latest%20release-635BFF?style=for-the-badge&logo=android&logoColor=white" alt="Download the latest BaryoVPN release" />
   </a>
 </p>
-Open the [latest release page](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest) for current downloads. The links below point specifically to **2.38.3 / Build 303**:
+Open the [latest release page](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest) for current downloads. The links below point specifically to **2.38.4 / Build 304**:
 
-- [Universal — all four supported architectures](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.3/BaryoVPN-2.38.3-universal-Build303.apk)
-- [arm64-v8a — modern 64-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.3/BaryoVPN-2.38.3-arm64-v8a-Build303.apk)
-- [armeabi-v7a — older 32-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.3/BaryoVPN-2.38.3-armeabi-v7a-Build303.apk)
-- [x86 — 32-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.3/BaryoVPN-2.38.3-x86-Build303.apk)
-- [x86_64 — 64-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.3/BaryoVPN-2.38.3-x86_64-Build303.apk)
-- [SHA-256 manifest for 2.38.3](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.3/SHA256SUMS.txt)
+- [Universal — all four supported architectures](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.4/BaryoVPN-2.38.4-universal-Build304.apk)
+- [arm64-v8a — modern 64-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.4/BaryoVPN-2.38.4-arm64-v8a-Build304.apk)
+- [armeabi-v7a — older 32-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.4/BaryoVPN-2.38.4-armeabi-v7a-Build304.apk)
+- [x86 — 32-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.4/BaryoVPN-2.38.4-x86-Build304.apk)
+- [x86_64 — 64-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.4/BaryoVPN-2.38.4-x86_64-Build304.apk)
+- [SHA-256 manifest for 2.38.4](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.4/SHA256SUMS.txt)
 
 For a manual download, choose the Universal APK or the package matching your device architecture. The in-app updater uses ABI detection and selects the matching architecture-specific APK; if it cannot confirm the device ABI, it stops automatic selection. Compare the downloaded file's SHA-256 with its matching manifest entry to check file integrity; a checksum alone does not establish authenticity.
 
@@ -157,7 +158,7 @@ For a manual download, choose the Universal APK or the package matching your dev
 
 ## Why is the APK large?
 
-The 2.38.3 Build 303 Universal APK is approximately **215 MiB** because it is a **standalone universal APK**, not a small development shell. It packages everything needed for a direct installation:
+The 2.38.4 Build 304 Universal APK is approximately **214.5 MiB** because it is a **standalone universal APK**, not a small development shell. It packages everything needed for a direct installation:
 
 - the Android and React Native runtime;
 - the complete user interface bundle and application resources;
@@ -188,6 +189,7 @@ BaryoVPN's public distribution repository does not contain application source co
 
 | Version | Highlights |
 |---|---|
+| **2.38.4 Build 304** | Responsive Start/Stop, stale-reconnect fencing and modern DNA quick actions |
 | **2.38.3 Build 303** | Modern, centered DNA dialogs and reliable outside-tap dismissal |
 | **2.38.2 Build 302** | Responsive Disconnect; immediate TUN closure and non-blocking native teardown |
 | **2.38.1 Build 301** | Baryo DNA / Mode Studio, encrypted local-profile transfer; supported settings only |
