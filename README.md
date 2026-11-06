@@ -181,7 +181,7 @@ The size is a distribution trade-off. It does **not** mean the app is silently b
 
 ## Privacy and public reporting
 
-BaryoVPN's public distribution repository does not contain application source code, source archives, private implementation reports or user subscription data. Please do not post subscription URLs, access tokens, credentials, UUIDs, private keys, raw configuration files or personal data in public issues. Read [SECURITY.md](SECURITY.md) before reporting anything that may be private.
+BaryoVPN's public distribution repository does not contain application source code, prebuilt application-source packages, private implementation reports or user subscription data. GitHub-generated repository snapshots contain only the public documentation and distribution assets, not the app implementation. Please do not post subscription URLs, access tokens, credentials, UUIDs, private keys, raw configuration files or personal data in public issues. Read [SECURITY.md](SECURITY.md) before reporting anything that may be private.
 
 ## Release timeline
 
