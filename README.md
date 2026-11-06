@@ -60,20 +60,24 @@ BaryoVPN can work with commonly used Xray-based profile formats, depending on th
 
 The app validates unsupported or incomplete data instead of silently treating it as a working connection. TUIC v5 is not included in the current bundled core; users should not expect a TUIC profile to connect in this release.
 
-## Latest release · 2.36.0 / Build 295
+## Latest release · 2.37.3 / Build 299
 [![Release](https://img.shields.io/github/v/release/BARYOPRO/BaryoVPN-Android?display_name=tag&sort=semver&style=flat-square&color=635BFF)](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest)
 > [!CAUTION]
-> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing BaryoVPN 2.36.0 Build 295. This is a standalone Android **release build**. No Metro server, development shell or source archive is required.
+> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing or updating BaryoVPN. The 2.37.3 Build 299 APKs are standalone Android **release builds**: no Metro server, development shell or source archive is required.
 
-### What’s new in 2.36.0 Build 295
-- Removed the experimental Fastest Connect flow; the dashboard now keeps the simpler, predictable manual server selection and connection path.
-- Reduced idle native status polling from every second to every three seconds while preserving one-second updates during Connecting and Connected states.
-- Memoized dashboard log filtering, sorting and counters to avoid repeating work on unrelated UI renders.
-- Improved Update Center reliability and release-download safety.
+### What’s new in the 2.37 series
+- **2.37.3 / Build 299:** Update Center refreshes device ABI information when checking for updates. If the ABI cannot be confirmed, automatic APK selection stops instead of falling back to Universal.
+- **2.37.2 / Build 298:** Update Center reads the installed version and build from application metadata, uses cache-busting for GitHub release checks and improves the NEW badge lifecycle.
+- **2.37.1 / Build 297:** Version-aware NEW badges help users discover newly introduced settings, including Adaptive Latency.
+- **2.37.0 / Build 296:** Adaptive Latency can refresh latency after a successful connection, a connected server change or a return from the background, without a background timer.
+
+See the [2.37.3 release notes](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.37.3) for this build and the [release history](https://github.com/BARYOPRO/BaryoVPN-Android/releases) for earlier versions. The public repository remains distribution-only and does not contain application source code.
+
+### Included in 2.36.0 Build 295
+- Removed the experimental Fastest Connect flow; the dashboard keeps manual server selection and connection.
+- Reduced idle native status polling while preserving responsive updates during active VPN sessions.
+- Optimized dashboard log processing and improved Update Center reliability.
 - Preserved the existing manual Connect flow, secure profile storage, Xray v26.10.31 engine, QR scanner, Midnight Aurora theme and ABI-aware installer.
-- Version 2.36.0 / Android build 295 can be installed as an update over 2.35.0 / Build 294.
-- Published one Universal APK plus four architecture-specific APKs.
-- The public distribution repository remains source-free by design.
 
 ### Included in 2.31.6 Build 286
 - Fixed the in-app APK update handoff.
@@ -113,23 +117,22 @@ The app validates unsupported or incomplete data instead of silently treating it
 - Clear Error state when startup validation fails instead of leaving the app stuck on Connecting.
 - Existing encrypted `.baryovpn` transfer, DNS, profile and subscription features are preserved.
 ### Download the latest release
-
 <p align="center">
   <a href="https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest">
-    <img src="https://img.shields.io/badge/Download%20BaryoVPN-2.36.0%20%7C%20Build%20295-635BFF?style=for-the-badge&logo=android&logoColor=white" alt="Download BaryoVPN 2.36.0 Build 295" />
+    <img src="https://img.shields.io/badge/Download%20BaryoVPN-latest%20release-635BFF?style=for-the-badge&logo=android&logoColor=white" alt="Download the latest BaryoVPN release" />
   </a>
 </p>
+Open the [latest release page](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest) for current downloads. The links below point specifically to **2.37.3 / Build 299**:
 
-Download the official Release APKs from the [BaryoVPN 2.36.0 release page](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.36.0).
+- [Universal — all four supported architectures](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.37.3/BaryoVPN-2.37.3-universal-Build299.apk)
+- [arm64-v8a — modern 64-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.37.3/BaryoVPN-2.37.3-arm64-v8a-Build299.apk)
+- [armeabi-v7a — older 32-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.37.3/BaryoVPN-2.37.3-armeabi-v7a-Build299.apk)
+- [x86 — 32-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.37.3/BaryoVPN-2.37.3-x86-Build299.apk)
+- [x86_64 — 64-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.37.3/BaryoVPN-2.37.3-x86_64-Build299.apk)
+- [SHA-256 manifest for 2.37.3](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.37.3/SHA256SUMS.txt)
 
-### Architecture-specific downloads
+For a manual download, choose the Universal APK or the package matching your device architecture. The in-app updater uses ABI detection and stops automatic selection if it cannot confirm the device ABI. Compare the downloaded file's SHA-256 with its matching manifest entry to check file integrity; a checksum alone does not establish authenticity.
 
-Use the Universal APK for normal installation. If a device requires a single-ABI package, choose the matching file:
-
-- [arm64-v8a — modern 64-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.36.0/BaryoVPN-2.36.0-arm64-v8a-release.apk)
-- [armeabi-v7a — older 32-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.36.0/BaryoVPN-2.36.0-armeabi-v7a-release.apk)
-- [x86 — 32-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.36.0/BaryoVPN-2.36.0-x86-release.apk)
-- [x86_64 — 64-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.36.0/BaryoVPN-2.36.0-x86_64-release.apk)
 ## Install in a few steps
 
 1. Open the [latest release](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest).
@@ -142,7 +145,7 @@ Use the Universal APK for normal installation. If a device requires a single-ABI
 
 ## Why is the APK large?
 
-The current release APK is approximately **213 MiB** because it is a **standalone universal APK**, not a small development shell. It packages everything needed for a direct installation:
+The 2.37.3 Build 299 Universal APK is approximately **214 MiB** because it is a **standalone universal APK**, not a small development shell. It packages everything needed for a direct installation:
 
 - the Android and React Native runtime;
 - the complete user interface bundle and application resources;
@@ -173,7 +176,17 @@ BaryoVPN's public distribution repository does not contain application source co
 
 | Version | Highlights |
 |---|---|
-| **2.31.9 Build 289** | Animated native Baryo launch logo with AndroidX SplashScreen compatibility |
+| **2.37.3 Build 299** | ABI refresh and safer automatic APK selection in Update Center |
+| **2.37.2 Build 298** | Installed-version accuracy, release-check cache handling and NEW badge fixes |
+| **2.37.1 Build 297** | Version-aware NEW badges and Adaptive Latency discovery |
+| **2.37.0 Build 296** | Event-driven Adaptive Latency without a background timer |
+| **2.36.0 Build 295** | Manual connection flow, reduced idle work and dashboard performance improvements |
+| **2.35.0 Build 294** | Introduced experimental Fastest Connect, later removed in 2.36.0 |
+| **2.34.0 Build 293** | About-page version accuracy and release-aware update information |
+| **2.33.0 Build 292** | Distinct Midnight Aurora palette and Android update notifications |
+| **2.32.1 Build 291** | Midnight Aurora refinement and live theme swatches |
+| **2.32.0 Build 290** | Plain dark startup and improved APK installer handoff |
+| **2.31.9 Build 289** | Animated native Baryo launch logo with AndroidX SplashScreen compatibility; removed in 2.32.0 |
 | **2.31.6 Build 286** | Native Android APK installer handoff with correct MIME and secure read permission |
 | **2.31.5 Build 285** | Midnight Aurora theme, invalid accent fallback protection and the verified ABI-aware Update Center |
 | **2.31.4 Build 284** | Exact installed APK ABI and size detection, architecture-aware update selection and verified single-ABI packages |
