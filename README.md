@@ -18,6 +18,11 @@
 
 </div>
 
+> [!CAUTION]
+> **Attention: Update and install from the app**
+>
+> You can now check for updates, download the latest version, and start installation directly from BaryoVPN’s **Update Center**. Android will ask you to review and confirm the installation.
+
 ---
 
 <div align="center">
