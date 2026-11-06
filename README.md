@@ -65,14 +65,17 @@ BaryoVPN can work with commonly used Xray-based profile formats, depending on th
 
 The app validates unsupported or incomplete data instead of silently treating it as a working connection. TUIC v5 is not included in the current bundled core; users should not expect a TUIC profile to connect in this release.
 
-## Latest release · 2.38.0 / Build 300
+## Latest release · 2.38.1 / Build 301
 [![Release](https://img.shields.io/github/v/release/BARYOPRO/BaryoVPN-Android?display_name=tag&sort=semver&style=flat-square&color=635BFF)](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest)
 > [!CAUTION]
-> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing or updating BaryoVPN. The 2.38.0 Build 300 APKs are standalone Android **release builds**: no Metro server, development shell or source archive is required.
+> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing or updating BaryoVPN. The 2.38.1 Build 301 APKs are standalone Android **release builds**: no Metro server, development shell or source archive is required.
 
-### What’s new in 2.38.0
-- **2.38.0 / Build 300:** The App Routing installed-app list is virtualized, keeps all matching apps accessible (no fixed 180-row cutoff), and reuses precomputed search keys while preserving selected-first grouping and filters.
-- **Performance scope:** Server and Activity lists already use virtualization; this update targets the non-virtualized installed-app list without adding persistent cache data that could go stale.
+### What’s new in 2.38.1
+- **Baryo DNA / Mode Studio:** Create, edit, duplicate, activate, deactivate and remove local mode profiles linked to VPN profiles already saved on the device.
+- **Supported settings only:** DNA stores supported connection, DNS and safety preferences plus the current app-routing snapshot; endpoint credentials are not copied into a DNA backup.
+- **Encrypted transfer:** Import and export DNA profiles with password-encrypted backups, schema validation, preview, migration and duplicate handling.
+- **Local-first:** DNA profiles remain on-device unless the user explicitly exports a backup; per-DNA scheduling and behavior learning are not included in this release.
+- **Retained from 2.38.0 / Build 300:** App Routing uses a virtualized installed-app list, with no fixed 180-row cutoff and precomputed search keys.
 
 ### Recent 2.37 updates
 - **2.37.3 / Build 299:** Update Center refreshes device ABI information when checking for updates. If the ABI cannot be confirmed, automatic APK selection stops instead of falling back to Universal.
@@ -80,7 +83,7 @@ The app validates unsupported or incomplete data instead of silently treating it
 - **2.37.1 / Build 297:** Version-aware NEW badges help users discover newly introduced settings, including Adaptive Latency.
 - **2.37.0 / Build 296:** Adaptive Latency can refresh latency after a successful connection, a connected server change or a return from the background, without a background timer.
 
-See the [2.38.0 release notes](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.38.0) for this build and the [release history](https://github.com/BARYOPRO/BaryoVPN-Android/releases) for earlier versions. The public repository remains distribution-only and does not contain application source code.
+See the [2.38.1 release notes](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.38.1) for this build and the [release history](https://github.com/BARYOPRO/BaryoVPN-Android/releases) for earlier versions. The public repository remains distribution-only and does not contain application source code.
 
 ### Included in 2.36.0 Build 295
 - Removed the experimental Fastest Connect flow; the dashboard keeps manual server selection and connection.
@@ -131,14 +134,14 @@ See the [2.38.0 release notes](https://github.com/BARYOPRO/BaryoVPN-Android/rele
     <img src="https://img.shields.io/badge/Download%20BaryoVPN-latest%20release-635BFF?style=for-the-badge&logo=android&logoColor=white" alt="Download the latest BaryoVPN release" />
   </a>
 </p>
-Open the [latest release page](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest) for current downloads. The links below point specifically to **2.38.0 / Build 300**:
+Open the [latest release page](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest) for current downloads. The links below point specifically to **2.38.1 / Build 301**:
 
-- [Universal — all four supported architectures](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.0/BaryoVPN-2.38.0-universal-Build300.apk)
-- [arm64-v8a — modern 64-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.0/BaryoVPN-2.38.0-arm64-v8a-Build300.apk)
-- [armeabi-v7a — older 32-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.0/BaryoVPN-2.38.0-armeabi-v7a-Build300.apk)
-- [x86 — 32-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.0/BaryoVPN-2.38.0-x86-Build300.apk)
-- [x86_64 — 64-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.0/BaryoVPN-2.38.0-x86_64-Build300.apk)
-- [SHA-256 manifest for 2.38.0](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.0/SHA256SUMS.txt)
+- [Universal — all four supported architectures](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.1/BaryoVPN-2.38.1-universal-Build301.apk)
+- [arm64-v8a — modern 64-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.1/BaryoVPN-2.38.1-arm64-v8a-Build301.apk)
+- [armeabi-v7a — older 32-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.1/BaryoVPN-2.38.1-armeabi-v7a-Build301.apk)
+- [x86 — 32-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.1/BaryoVPN-2.38.1-x86-Build301.apk)
+- [x86_64 — 64-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.1/BaryoVPN-2.38.1-x86_64-Build301.apk)
+- [SHA-256 manifest for 2.38.1](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.1/SHA256SUMS.txt)
 
 For a manual download, choose the Universal APK or the package matching your device architecture. The in-app updater uses ABI detection and stops automatic selection if it cannot confirm the device ABI. Compare the downloaded file's SHA-256 with its matching manifest entry to check file integrity; a checksum alone does not establish authenticity.
 
@@ -154,7 +157,7 @@ For a manual download, choose the Universal APK or the package matching your dev
 
 ## Why is the APK large?
 
-The 2.38.0 Build 300 Universal APK is approximately **215 MiB** because it is a **standalone universal APK**, not a small development shell. It packages everything needed for a direct installation:
+The 2.38.1 Build 301 Universal APK is approximately **215 MiB** because it is a **standalone universal APK**, not a small development shell. It packages everything needed for a direct installation:
 
 - the Android and React Native runtime;
 - the complete user interface bundle and application resources;
@@ -185,6 +188,7 @@ BaryoVPN's public distribution repository does not contain application source co
 
 | Version | Highlights |
 |---|---|
+| **2.38.1 Build 301** | Baryo DNA / Mode Studio, encrypted local-profile transfer; supported settings only |
 | **2.38.0 Build 300** | Virtualized App Routing list, no fixed app cutoff and precomputed search keys |
 | **2.37.3 Build 299** | ABI refresh and safer automatic APK selection in Update Center |
 | **2.37.2 Build 298** | Installed-version accuracy, release-check cache handling and NEW badge fixes |
