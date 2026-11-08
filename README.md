@@ -65,19 +65,19 @@ BaryoVPN can work with commonly used Xray-based profile formats, depending on th
 
 The app validates unsupported or incomplete data instead of silently treating it as a working connection. TUIC v5 is not included in the current bundled core; users should not expect a TUIC profile to connect in this release.
 
-## Latest release · 2.39.8 / Build 318
+## Latest release · 2.39.9 / Build 319
 [![Release](https://img.shields.io/github/v/release/BARYOPRO/BaryoVPN-Android?display_name=tag&sort=semver&style=flat-square&color=635BFF)](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest)
 > [!CAUTION]
 > **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing or updating BaryoVPN. Build 316 is a standalone Android **APK-only release**. No application source code or source archive is included.
 
-### What’s new in 2.39.8
-- **Home redesign:** Home is presented as a centered, fully contained blue circle.
-- **Premium contrast:** cyan-to-electric-blue treatment with a subtle glow, white icon and selected label.
-- **Stable navigation:** the existing bar geometry, behavior and five-tab structure remain preserved.
+### What’s new in 2.39.9
+- **Rectangular Home panel:** replaced the circular treatment with a clean, contained active panel.
+- **Premium styling:** restrained cyan-to-blue gradient, subtle leading accent and soft depth.
+- **Layout preserved:** no changes to the existing font sizes, icon sizes, bar height, spacing or navigation behavior.
 - **All five ABIs:** arm64-v8a, armeabi-v7a, x86, x86_64 and universal are included.
 - **Distribution only:** this public repository publishes release APKs and documentation, not the app source.
 
-See the [2.39.8 release notes](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.39.8) for this build and the [release history](https://github.com/BARYOPRO/BaryoVPN-Android/releases) for earlier versions. The public repository remains distribution-only and does not contain application source code.
+See the [2.39.9 release notes](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.39.9) for this build and the [release history](https://github.com/BARYOPRO/BaryoVPN-Android/releases) for earlier versions. The public repository remains distribution-only and does not contain application source code.
 
 ### Included in 2.36.0 Build 295
 - Removed the experimental Fastest Connect flow; the dashboard keeps manual server selection and connection.
@@ -128,13 +128,13 @@ See the [2.39.8 release notes](https://github.com/BARYOPRO/BaryoVPN-Android/rele
     <img src="https://img.shields.io/badge/Download%20BaryoVPN-latest%20release-635BFF?style=for-the-badge&logo=android&logoColor=white" alt="Download the latest BaryoVPN release" />
   </a>
 </p>
-Open the [latest release page](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest) for current downloads. The links below point specifically to **2.39.8 / Build 318**:
+Open the [latest release page](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest) for current downloads. The links below point specifically to **2.39.9 / Build 319**:
 
-- [Universal — all four supported architectures](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.39.8/BaryoVPN-2.39.8-universal-Build318.apk)
-- [arm64-v8a — modern 64-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.39.8/BaryoVPN-2.39.8-arm64-v8a-Build318.apk)
-- [armeabi-v7a — older 32-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.39.8/BaryoVPN-2.39.8-armeabi-v7a-Build318.apk)
-- [x86 — 32-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.39.8/BaryoVPN-2.39.8-x86-Build318.apk)
-- [x86_64 — 64-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.39.8/BaryoVPN-2.39.8-x86_64-Build318.apk)
+- [Universal — all four supported architectures](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.39.9/BaryoVPN-2.39.9-universal-Build319.apk)
+- [arm64-v8a — modern 64-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.39.9/BaryoVPN-2.39.9-arm64-v8a-Build319.apk)
+- [armeabi-v7a — older 32-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.39.9/BaryoVPN-2.39.9-armeabi-v7a-Build319.apk)
+- [x86 — 32-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.39.9/BaryoVPN-2.39.9-x86-Build319.apk)
+- [x86_64 — 64-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.39.9/BaryoVPN-2.39.9-x86_64-Build319.apk)
 
 For a manual download, choose the Universal APK or the package matching your device architecture. The in-app updater uses ABI detection and selects the matching architecture-specific APK; if it cannot confirm the device ABI, it stops automatic selection. Download APKs only from the official release page and choose the package matching your device architecture.
 
@@ -181,6 +181,7 @@ BaryoVPN's public distribution repository does not contain application source co
 
 | Version | Highlights |
 |---|---|
+| **2.39.9 Build 319** | Refined rectangular Home active panel
 | **2.39.8 Build 318** | Centered circular Home navigation treatment
 | **2.39.7 Build 317** | Refined five-tab bottom navigation with centered Home treatment
 | **2.39.6 Build 316** | New reliable-updates discovery and protected download explanation
