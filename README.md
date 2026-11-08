@@ -146,9 +146,8 @@ Open the [latest release page](https://github.com/BARYOPRO/BaryoVPN-Android/rele
 - [armeabi-v7a — older 32-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.6/BaryoVPN-2.38.6-armeabi-v7a-Build306.apk)
 - [x86 — 32-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.6/BaryoVPN-2.38.6-x86-Build306.apk)
 - [x86_64 — 64-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.6/BaryoVPN-2.38.6-x86_64-Build306.apk)
-- [SHA-256 manifest for 2.38.5](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.6/SHA256SUMS.txt)
 
-For a manual download, choose the Universal APK or the package matching your device architecture. The in-app updater uses ABI detection and selects the matching architecture-specific APK; if it cannot confirm the device ABI, it stops automatic selection. Compare the downloaded file's SHA-256 with its matching manifest entry to check file integrity; a checksum alone does not establish authenticity.
+For a manual download, choose the Universal APK or the package matching your device architecture. The in-app updater uses ABI detection and selects the matching architecture-specific APK; if it cannot confirm the device ABI, it stops automatic selection. Download APKs only from the official release page and choose the package matching your device architecture.
 
 ## Install in a few steps
 
