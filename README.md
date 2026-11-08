@@ -65,15 +65,15 @@ BaryoVPN can work with commonly used Xray-based profile formats, depending on th
 
 The app validates unsupported or incomplete data instead of silently treating it as a working connection. TUIC v5 is not included in the current bundled core; users should not expect a TUIC profile to connect in this release.
 
-## Latest release · 2.38.6 / Build 306
+## Latest release · 2.38.7 / Build 307
 [![Release](https://img.shields.io/github/v/release/BARYOPRO/BaryoVPN-Android?display_name=tag&sort=semver&style=flat-square&color=635BFF)](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest)
 > [!CAUTION]
-> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing or updating BaryoVPN. Build 306 is a standalone Android **APK-only release**. No application source code or source archive is included.
+> **IMPORTANT — PLEASE READ BEFORE INSTALLING:** Back up anything important before installing or updating BaryoVPN. Build 307 is a standalone Android **APK-only release**. No application source code or source archive is included.
 
-### What’s new in 2.38.6
-- **Predictable Adaptive Latency:** measures latency once when a VPN connection starts and does not repeat while that connection remains active.
-- **No surprise checks:** returning to the app or changing the selected server no longer starts an automatic latency measurement.
-- **Manual control retained:** users can still run a latency test from the server controls whenever they choose.
+### What’s new in 2.38.7
+- **More reliable data-path recovery:** health checks continue during live traffic instead of assuming upload activity proves that response traffic is returning.
+- **Less false “active transfer” state:** recovery protection now relies on recent downstream traffic, so a stalled upload cannot suppress recovery indefinitely.
+- **Measured traffic only:** the dashboard continues to show real Xray counters and does not invent device-wide traffic totals.
 - **Distribution only:** this public repository publishes release APKs and documentation, not the app source.
 
 ### Previous 2.38.4 highlights
@@ -88,7 +88,7 @@ The app validates unsupported or incomplete data instead of silently treating it
 - **2.37.1 / Build 297:** Version-aware NEW badges help users discover newly introduced settings, including Adaptive Latency.
 - **2.37.0 / Build 296:** Adaptive Latency can refresh latency after a successful connection, a connected server change or a return from the background, without a background timer.
 
-See the [2.38.6 release notes](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.38.6) for this build and the [release history](https://github.com/BARYOPRO/BaryoVPN-Android/releases) for earlier versions. The public repository remains distribution-only and does not contain application source code.
+See the [2.38.7 release notes](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.38.7) for this build and the [release history](https://github.com/BARYOPRO/BaryoVPN-Android/releases) for earlier versions. The public repository remains distribution-only and does not contain application source code.
 
 ### Included in 2.36.0 Build 295
 - Removed the experimental Fastest Connect flow; the dashboard keeps manual server selection and connection.
@@ -139,13 +139,13 @@ See the [2.38.6 release notes](https://github.com/BARYOPRO/BaryoVPN-Android/rele
     <img src="https://img.shields.io/badge/Download%20BaryoVPN-latest%20release-635BFF?style=for-the-badge&logo=android&logoColor=white" alt="Download the latest BaryoVPN release" />
   </a>
 </p>
-Open the [latest release page](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest) for current downloads. The links below point specifically to **2.38.6 / Build 306**:
+Open the [latest release page](https://github.com/BARYOPRO/BaryoVPN-Android/releases/latest) for current downloads. The links below point specifically to **2.38.7 / Build 307**:
 
-- [Universal — all four supported architectures](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.6/BaryoVPN-2.38.6-universal-Build306.apk)
-- [arm64-v8a — modern 64-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.6/BaryoVPN-2.38.6-arm64-v8a-Build306.apk)
-- [armeabi-v7a — older 32-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.6/BaryoVPN-2.38.6-armeabi-v7a-Build306.apk)
-- [x86 — 32-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.6/BaryoVPN-2.38.6-x86-Build306.apk)
-- [x86_64 — 64-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.6/BaryoVPN-2.38.6-x86_64-Build306.apk)
+- [Universal — all four supported architectures](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.7/BaryoVPN-2.38.7-universal-Build307.apk)
+- [arm64-v8a — modern 64-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.7/BaryoVPN-2.38.7-arm64-v8a-Build307.apk)
+- [armeabi-v7a — older 32-bit ARM phones](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.7/BaryoVPN-2.38.7-armeabi-v7a-Build307.apk)
+- [x86 — 32-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.7/BaryoVPN-2.38.7-x86-Build307.apk)
+- [x86_64 — 64-bit Intel devices/emulators](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.38.7/BaryoVPN-2.38.7-x86_64-Build307.apk)
 
 For a manual download, choose the Universal APK or the package matching your device architecture. The in-app updater uses ABI detection and selects the matching architecture-specific APK; if it cannot confirm the device ABI, it stops automatic selection. Download APKs only from the official release page and choose the package matching your device architecture.
 
@@ -192,6 +192,7 @@ BaryoVPN's public distribution repository does not contain application source co
 
 | Version | Highlights |
 |---|---|
+| **2.38.7 Build 307** | More reliable data-path recovery when upload activity continues without response traffic
 | **2.38.6 Build 306** | Predictable connection-start Adaptive Latency with no repeated automatic checks
 | **2.38.5 Build 305** | Responsive VPN lifecycle, refined DNA dialogs and modern dashboard with reduced-motion support |
 | **2.38.4 Build 304** | Responsive Start/Stop, stale-reconnect fencing and modern DNA quick actions |
