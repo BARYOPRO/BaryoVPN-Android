@@ -35,15 +35,15 @@ BaryoVPN is designed to make Android VPN management feel understandable: the hom
 
 ## Latest release
 
-### BaryoVPN 2.40.28 · Build 348
+### BaryoVPN 2.40.29 · Build 349
 
-- Reduced oversized typography across the app for a more compact, balanced interface.
-- Large headings are approximately 12% smaller and regular text approximately 8% smaller.
-- Preserved readability for very small labels.
-- No VPN logic, navigation behavior or startup flow changes.
+- Auto-start on config select remains enabled with immediate Connecting feedback for a smoother handoff.
+- The selected profile is passed directly into the start pipeline to reduce selection latency.
+- Refreshed the About page copy for the current product, privacy boundaries and release flow.
+- Long-reopen hydration protection remains in place.
 - Preserved the existing navigation order, connection behavior and update flow.
 
-[**View the full release and all downloads →**](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.40.28)
+[**View the full release and all downloads →**](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.40.29)
 
 ## Download
 
@@ -51,11 +51,11 @@ Choose the APK that matches your device. If you are unsure, use **Universal**.
 
 | Device architecture | Download |
 | --- | --- |
-| ARM 64-bit · most modern phones | [arm64-v8a](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.28/BaryoVPN-2.40.28-Build348-arm64-v8a.apk) |
-| ARM 32-bit · older phones | [armeabi-v7a](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.28/BaryoVPN-2.40.28-Build348-armeabi-v7a.apk) |
-| Intel 32-bit | [x86](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.28/BaryoVPN-2.40.28-Build348-x86.apk) |
-| Intel 64-bit | [x86_64](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.28/BaryoVPN-2.40.28-Build348-x86_64.apk) |
-| Any supported architecture | [Universal](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.28/BaryoVPN-2.40.28-Build348-universal.apk) |
+| ARM 64-bit · most modern phones | [arm64-v8a](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.29/BaryoVPN-2.40.29-Build349-arm64-v8a.apk) |
+| ARM 32-bit · older phones | [armeabi-v7a](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.29/BaryoVPN-2.40.29-Build349-armeabi-v7a.apk) |
+| Intel 32-bit | [x86](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.29/BaryoVPN-2.40.29-Build349-x86.apk) |
+| Intel 64-bit | [x86_64](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.29/BaryoVPN-2.40.29-Build349-x86_64.apk) |
+| Any supported architecture | [Universal](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.29/BaryoVPN-2.40.29-Build349-universal.apk) |
 
 > Android will show its normal installation confirmation. BaryoVPN never installs APKs silently.
 
