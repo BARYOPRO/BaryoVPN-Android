@@ -34,31 +34,22 @@ BaryoVPN is designed to make Android VPN management feel understandable: the hom
 | **Responsive interface** | Designed for narrow phones, large displays, light mode and dark mode. |
 
 ## Latest release
+### BaryoVPN 2.40.54 · Build 374
+- Hotspot Gateway now shows connection activity more clearly and provides easier-to-understand event messages.
+- Network compatibility options have also been improved.
+- Five Android installers are available for different device architectures.
 
-### BaryoVPN 2.40.36 · Build 356
-
-- Startup profile, subscription and selection reads now run in parallel to reduce reopen latency.
-- Network-state and active-network discovery now run in parallel before connection policy checks.
-- Runtime logs remain bounded and traffic totals use a one-time memory cache with controlled persistence.
-- VPN permission, secure payload, Xray validation, fallback and native lifecycle safeguards are unchanged.
-- Preserved the existing navigation order, connection behavior and update flow.
-
-[**View the full release and all downloads →**](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.40.36)
-
+[**View the full release and all downloads →**](https://github.com/BARYOPRO/BaryoVPN-Android/releases/tag/v2.40.54)
 ## Download
-
 Choose the APK that matches your device. If you are unsure, use **Universal**.
-
 | Device architecture | Download |
 | --- | --- |
-| ARM 64-bit · most modern phones | [arm64-v8a](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.36/BaryoVPN-2.40.36-Build356-arm64-v8a.apk) |
-| ARM 32-bit · older phones | [armeabi-v7a](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.36/BaryoVPN-2.40.36-Build356-armeabi-v7a.apk) |
-| Intel 32-bit | [x86](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.36/BaryoVPN-2.40.36-Build356-x86.apk) |
-| Intel 64-bit | [x86_64](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.36/BaryoVPN-2.40.36-Build356-x86_64.apk) |
-| Any supported architecture | [Universal](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.36/BaryoVPN-2.40.36-Build356-universal.apk) |
-
+| ARM 64-bit · most modern phones | [arm64-v8a](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.54/BaryoVPN-2.40.54-Build374-arm64-v8a.apk) |
+| ARM 32-bit · older phones | [armeabi-v7a](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.54/BaryoVPN-2.40.54-Build374-armeabi-v7a.apk) |
+| Intel 32-bit | [x86](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.54/BaryoVPN-2.40.54-Build374-x86.apk) |
+| Intel 64-bit | [x86_64](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.54/BaryoVPN-2.40.54-Build374-x86_64.apk) |
+| Any supported architecture | [Universal](https://github.com/BARYOPRO/BaryoVPN-Android/releases/download/v2.40.54/BaryoVPN-2.40.54-Build374-universal.apk) |
 > Android will show its normal installation confirmation. BaryoVPN never installs APKs silently.
-
 ## Supported profile formats
 
 Support depends on the fields supplied by the profile and the capabilities of the bundled core. Common formats include:
